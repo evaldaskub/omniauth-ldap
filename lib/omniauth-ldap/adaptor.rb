@@ -60,8 +60,8 @@ module OmniAuth
                     :password => @password
                   }
         config[:auth] = @auth
-        config[:encryption] =
-          method == :ssl && @verify_mode ? { method: method, tls_options: { verify_mode: @verify_mode } } : method
+        # Temporary overwrite
+        config[:encryption] = method == :ssl ? { method: method, tls_options: { verify_mode: 0 } } : method
         @connection = Net::LDAP.new(config)
       end
 
