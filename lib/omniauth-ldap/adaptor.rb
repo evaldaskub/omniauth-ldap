@@ -60,7 +60,7 @@ module OmniAuth
                     :password => @password
                   }
         config[:auth] = @auth
-        config[:encryption] = method == :tls && @tls_options ? { method: method, tls_options: @tls_options } : method
+        config[:encryption] = method == :ssl && @tls_options ? { method: method, tls_options: @tls_options } : method
         @connection = Net::LDAP.new(config)
       end
 
