@@ -16,8 +16,13 @@ module OmniAuth
         'location' => {"%0, %1, %2, %3 %4" => [['address', 'postalAddress', 'homePostalAddress', 'street', 'streetAddress'], ['l'], ['st'],['co'],['postOfficeBox']]},
         'uid' => 'dn',
         'url' => ['wwwhomepage'],
-        'image' => 'jpegPhoto',
-        'description' => 'description'
+        'image' => 'thumbnailphoto',
+        'description' => 'description',
+        'initials' => 'initials',
+        'department' => 'department',
+        'company' => 'company',
+        'division' => 'division',
+        'memberof' => 'memberof'
       }
       option :title, "LDAP Authentication" #default title for authentication form
       option :port, 389
